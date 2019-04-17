@@ -11,3 +11,14 @@ td, th {
 h1 {
     text-align: center;
 }
+
+h2 {
+    margin: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+form {
+    background-color: indianred;
+    border-radius: 5px;
+    padding: 5px 10px;
+}

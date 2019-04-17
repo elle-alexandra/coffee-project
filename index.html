@@ -20,55 +20,63 @@
     <div class="row">
 
         <div class="col-6">
+
             <div class="row">
-                <div class="col-6" id="allCoffees">
-                    LEFT COFFEE
+                <div class="col">
+                    <div id="coffees"></div>
                 </div>
-                <!--<div class="col-6" id="rightCoffees">-->
-                    <!--RIGHT COFFEE-->
-                <!--</div>-->
             </div>
         </div>
 
         <div class="col-6">
-            <form>
-                <label for="roast-selection"><strong>Roast</strong></label>
-                <select class="form-control" id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select><br>
-                <label>Coffee Name</label>
-                <input class="input-group-text" type="text"><br>
-                <input id="submit" type="submit">
-            </form>
 
             <form>
-                <label for="roast-selection"><strong>Roast</strong></label>
-                <select class="form-control" id="roast-selection-2">
+                <label for="roastSelection"><strong>Roast</strong></label>
+                <select class="form-control" id="roastSelection">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
-                </select><br>
-                <label>Coffee Name</label>
-                <input class="input-group-text" type="text"><br>
-                <input id="submit-2" type="submit">
+                </select>
+                <br>
+
+                <label><strong>Coffee Name</strong></label>
+                <input class="form-control" type="text" id="addCoffeeName" aria-describedby="emailHelp"><br>
+                <button type="button"  class="btn btn-lg btn-block">Submit</button>
+            </form>
+
+            <h2>Add a coffee!</h2>
+
+
+            <form>
+                <label for="coffeeSearch"><strong>Roast</strong></label>
+                <select class="form-control" id="coffeeSearch">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <br>
+
+                <label><strong>Name</strong></label>
+                <input class="form-control" type="text" id="addName" aria-describedby="emailHelp"><br>
+                <button type="button" class="btn btn-lg btn-block">Submit</button>
             </form>
 
         </div>
     </div>
 </div>
 
-    <!--<table>-->
-    <!--<thead>-->
-    <!--<tr>-->
-    <!--<th>ID</th>-->
-    <!--<th>NAME</th>-->
-    <!--<th>ROAST</th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-    <!--<tbody id="coffees"></tbody>-->
-    <!--</table>-->
+<!--<table>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>ID</th>-->
+<!--<th>NAME</th>-->
+<!--<th>ROAST</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody id="coffees"></tbody>-->
+<!--</table>-->
 
 <script></script>
 <script src="main.js"></script>
