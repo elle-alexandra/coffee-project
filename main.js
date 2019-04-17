@@ -1,19 +1,21 @@
 "use strict";
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
+function renderCoffees(coffees) {
+    var html = '<tr class="coffees">';
+    html += '<td>' + coffees.id + '</td>';
+    html += '<td>' + coffees.name + '</td>';
+    html += '<td>' + coffees.roast + '</td>';
     html += '</tr>';
 
     return html;
 }
+ var str = "";
+ var userInput = "";
 
 function renderCoffees(coffees) {
     var html = str.includes(userInput.toLowerCase());
     for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+        html += renderCoffees(coffees[i]);
     }
     return html;
 }
@@ -22,12 +24,12 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [coffees.name];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+    coffees.forEach(function(coffees) {
+        if (coffees.roast === selectedRoast) {
+            filteredCoffees.push(coffees);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    allCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -50,10 +52,10 @@ var coffees = [
 
 
 
-var tbody = document.querySelector('#coffees');
+var allCoffees = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+allCoffees.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
