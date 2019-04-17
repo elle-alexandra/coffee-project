@@ -41,7 +41,7 @@ improvements to it.
 
     Create another form on the page that has an input for the coffee name, and
     a select to choose the coffee roast. When the form is submitted, the new
-    cofee should appear on the page. (*Note that any new coffees you add will
+    coffee should appear on the page. (*Note that any new coffees you add will
     be lost when you refresh the page, for an extra challenge, research
     `localStorage` and see if you can find a way to persist the data*)
 
@@ -57,4 +57,4 @@ improvements to it.
 Here is an example demonstrating the above functionality. Your application might
 look different, but should have the same features.
 
-![Cofee Project Demo](demo.gif)
+![Coffee Project Demo](demo.gif)
