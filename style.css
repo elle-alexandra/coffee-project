@@ -8,17 +8,65 @@ td, th {
     padding: 5px 10px;
 }
 
+body {
+    background-image: url("img/caffeine-coffee.png");
+    background-size: 100%;
+}
+
 h1 {
     text-align: center;
+    background-color: rgba(255, 228, 118, .3);
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
     margin: 5px 5px 5px 5px;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 form {
-    background-color: indianred;
+    background-color: rgba(255, 228, 118, .3);
     border-radius: 5px;
     padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+form strong {
+    font-size: 1.5em;
+    color: white;
+}
+
+list {
+    position: fixed;
+}
+
+form .btn {
+    border-color: white;
+    color: white;
+}
+
+form .btn:hover {
+    border-color: #c35033;
+    color: #c35033;
+}
+
+.row {
+    padding-top: 2em;
+}
+
+#addACoffee {
+    color: white;
+    padding: 1rem 0rem 1rem 0rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#coffees {
+    padding: 2em 5em 5em 5em;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+#coffees span {
+    font-size: 1.5em;
 }

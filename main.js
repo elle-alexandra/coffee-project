@@ -3,24 +3,25 @@
 var tbody = document.querySelector("#coffees");
 var submitButton = document.querySelector("#submit");
 var roastSelection = document.querySelector("#roastSelection");
+// var typeOut = document.querySelector("#addCoffeeName")
 var searchCoffees = document.querySelector("#searchCoffee");
 
  // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-        {id: 2, name: 'Half City', roast: 'light'},
-        {id: 3, name: 'Cinnamon', roast: 'light'},
-        {id: 4, name: 'City', roast: 'medium'},
-        {id: 5, name: 'American', roast: 'medium'},
-        {id: 6, name: 'Breakfast', roast: 'medium'},
-        {id: 7, name: 'High', roast: 'dark'},
-        {id: 8, name: 'Continental', roast: 'dark'},
-        {id: 9, name: 'New Orleans', roast: 'dark'},
-        {id: 10, name: 'European', roast: 'dark'},
-        {id: 11, name: 'Espresso', roast: 'dark'},
-        {id: 12, name: 'Viennese', roast: 'dark'},
-        {id: 13, name: 'Italian', roast: 'dark'},
-        {id: 14, name: 'French', roast: 'dark'}
+    {id: 1, name: '<span>Light City</span>', roast: 'light'},
+        {id: 2, name: '<span>Half City</span>', roast: 'light'},
+        {id: 3, name: '<span>Cinnamon</span>', roast: 'light'},
+        {id: 4, name: '<span>City</span>', roast: 'medium'},
+        {id: 5, name: '<span>American</span>', roast: 'medium'},
+        {id: 6, name: '<span>Breakfast</span>', roast: 'medium'},
+        {id: 7, name: '<span>High</span>', roast: 'dark<br>'},
+        {id: 8, name: '<span>Continental</span>', roast: 'dark'},
+        {id: 9, name: '<span>New Orleans</span>', roast: 'dark'},
+        {id: 10, name: '<span>European</span>', roast: 'dark'},
+        {id: 11, name: '<span>Espresso</span>', roast: 'dark'},
+        {id: 12, name: '<span>Viennese</span>', roast: 'dark'},
+        {id: 13, name: '<span>Italian</span>', roast: 'dark'},
+        {id: 14, name: '<span>French</span>', roast: 'dark'}
     ];
 
 function renderCoffee(coffee) {
@@ -46,7 +47,7 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     console.log(coffees);
-    if (e!= undefined) {
+    if (e != undefined) {
         e.preventDefault()
     }
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -64,7 +65,7 @@ function updateCoffees(e) {
 }
 
 
-function searchCoffee (event) {
+function searchCoffee (e) {
     var coffeeInput = searchCoffee.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -78,9 +79,10 @@ function searchCoffee (event) {
 
 
 
-// searchCoffee("#coffees").load(location.href + " #coffees");
-searchCoffees.addEventListener('keyup', searchCoffee);
+// searchCoffee("#coffees").load(location.href + " #coffees"); //coffees disappear if uncommented
+// searchCoffees.addEventListener('keyup', searchCoffee); //coffees disappear if uncommented
 roastSelection.addEventListener('mouseleave', updateCoffees);
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', updateCoffees, false);
+// typeOut.addEventListener('input', "#addCoffeeName", false);
 
 tbody.innerHTML = renderCoffees(coffees);
