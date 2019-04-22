@@ -8,63 +8,89 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto:300i" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
 </head>
 
 <body>
 
-<h1 class="title">Coffee!</h1>
-
-<div class="container-fluid">
+<!--HEADER-->
+<div class="container col-10">
     <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="title">Ye Olde Coffee</h1>
+            <hr>
+        </div>
+    </div>
 
-        <div class="col-6">
+    <!---LIST OF COFFEES GOES HERE-->
 
-            <div class="row">
-                <div class="col lists">
-                    <div id="coffees"></div>
-                </div>
+    <div class="row">
+        <div class="col-7">
+            <div class="row text-center justify-content-left" id="coffees">
             </div>
         </div>
 
-        <div class="col-6">
-
+        <!--ROAST TYPE-->
+        <div class="col-5">
             <form>
-                <label for="roastSelection"><strong>Roast</strong></label>
-                <select class="form-control" id="roastSelection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <br>
+                <div class="form-group card">
+                    <div class="card-body">
+                        <label for="roastSelection"><strong>Roast</strong></label>
+                        <select class="form-control" id="roastSelection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <br>
 
-                <label><strong>Coffee Name</strong></label>
-                <input class="form-control" type="text" id="addCoffeeName" aria-describedby="emailHelp"><br>
-                <button type="button"  class="btn btn-lg btn-block">Submit</button>
+                        <!--NAME OF COFFEE-->
+
+                        <div class="form-group">
+                            <label><strong>Coffee Name</strong></label>
+                            <input class="form-control" type="text" id="addCoffeeName" aria-describedby="emailHelp"><br>
+                        </div>
+                        <br>
+
+                        <!--BUTTON-->
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-lg btn-block">Submit</button>
+                        </div>
+                    </div>
+                </div>
             </form>
 
-            <h2 id="addACoffee">Add a coffee!</h2>
+            <hr>
 
-
+            <h2 id="addACoffee">Add a coffee!</h2> <!--ADD A COFFEE-->
             <form>
-                <label for="coffeeSearch"><strong>Roast</strong></label>
-                <select class="form-control" id="coffeeSearch">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <br>
 
-                <label><strong>Name</strong></label>
-                <input class="form-control" type="text" id="addName" aria-describedby="emailHelp"><br>
-                <button type="button" id="submit" class="btn btn-lg btn-block">Submit</button>
+                <!--ROAST TYPE-->
+                <div class="form-group card">
+                    <div class="card-body">
+                        <label for="coffeeSearch"><strong>Roast</strong></label>
+                        <select class="form-control" id="coffeeSearch">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+
+                        <br>
+                        <div class="form-group">
+
+                            <label><strong>Name</strong></label>
+                            <input class="form-control" type="text" id="addName" aria-describedby="emailHelp"><br>
+                            <button type="button" id="submit" class="btn btn-lg btn-block">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
             </form>
-
         </div>
+
     </div>
+</div>
 </div>
 
 <!--<table>-->

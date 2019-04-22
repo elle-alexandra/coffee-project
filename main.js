@@ -25,14 +25,13 @@ var coffees = [
     ];
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffees" id="idCoffee">';
+    var html = '<div>';
     html += '<div>' + coffee.name + '</div>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>' + '<br>';
 
     return html;
 }
-
 
 
 function renderCoffees(coffees) {
@@ -42,7 +41,6 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
 
 
 function updateCoffees(e) {
@@ -66,6 +64,7 @@ function updateCoffees(e) {
 
 
 function searchCoffee (e) {
+    e.preventDefault();
     var coffeeInput = searchCoffee.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {

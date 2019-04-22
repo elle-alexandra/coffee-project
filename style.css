@@ -15,7 +15,7 @@ body {
 
 h1 {
     text-align: center;
-    background-color: rgba(255, 228, 118, .3);
+    /*background-color: rgba(255, 228, 118, .3);*/
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -26,7 +26,7 @@ h2 {
 }
 
 form {
-    background-color: rgba(255, 228, 118, .3);
+    /*background-color: rgba(255, 228, 118, .3);*/
     border-radius: 5px;
     padding: 5px 10px;
     font-family: 'Open Sans', sans-serif;
@@ -34,7 +34,7 @@ form {
 
 form strong {
     font-size: 1.5em;
-    color: white;
+    color: black;
 }
 
 list {
@@ -42,8 +42,8 @@ list {
 }
 
 form .btn {
-    border-color: white;
-    color: white;
+    border-color: black;
+    color: black;
 }
 
 form .btn:hover {
@@ -51,8 +51,16 @@ form .btn:hover {
     color: #c35033;
 }
 
+.title {
+    background-color: rgba(255, 228, 118, .3);
+}
+
 .row {
     padding-top: 2em;
+}
+
+.card-body {
+    background-color: rgba(255, 228, 118, .3);
 }
 
 #addACoffee {
@@ -62,11 +70,13 @@ form .btn:hover {
 }
 
 #coffees {
-    padding: 2em 5em 5em 5em;
+    padding: 1em;
     font-family: 'Raleway', sans-serif;
+    /*position: relative;*/
+    /*float: left;*/
 
 }
 
 #coffees span {
-    font-size: 1.5em;
+    font-size: 1em;
 }
